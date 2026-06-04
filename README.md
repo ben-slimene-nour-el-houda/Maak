@@ -14,10 +14,6 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 > **Redefining administrative accessibility in Tunisia** through on-device AI, computer vision, AR navigation, intelligent OCR form automation, and predictive analytics — built exclusively for citizens with disabilities.
-
-- **Live Demo APK**: Available in GitHub Actions artifacts (staging build)
-
-
 ---
 
 ## Table of Contents
