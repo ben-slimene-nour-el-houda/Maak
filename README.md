@@ -572,6 +572,5 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **معاك — Because no one should face bureaucracy alone.**
 
-**Repository**: [github.com/ben-slimene-nour-el-houda/Maak](https://github.com/ben-slimene-nour-el-houda/Maak)
 
 </div>
