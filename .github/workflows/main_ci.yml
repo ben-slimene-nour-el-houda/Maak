@@ -1,0 +1,109 @@
+name: Maak CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Lint and Test
+        run: |
+          cd backend
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # run pytest
+          pytest
+
+  flutter-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.2'
+          channel: 'stable'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Lint and Test
+        run: |
+          flutter analyze
+          flutter test
+
+  build-docker-backend:
+    needs: [backend-test]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./backend
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/maak-backend:latest
+            ghcr.io/${{ github.repository_owner }}/maak-backend:${{ github.sha }}
+
+  deploy-google-cloud-run:
+    needs: [build-docker-backend]
+    if: github.ref == 'refs/heads/main' && secrets.GCP_SA_KEY != ''
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+      - name: Set gcloud project and region
+        run: |
+          gcloud config set project "${{ secrets.GCP_PROJECT }}"
+          gcloud config set run/region "${{ secrets.GCP_REGION }}"
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy maak-backend \
+            --image ghcr.io/${{ github.repository_owner }}/maak-backend:${{ github.sha }} \
+            --region "${{ secrets.GCP_REGION }}" \
+            --platform managed \
+            --allow-unauthenticated \
+            --quiet \
+            --port 8000
+
+  build-staging-apk:
+    needs: [flutter-test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.2'
+      - name: Build APK
+        run: flutter build apk --debug # Debug APK for staging tests
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: Maak-Staging-APK
+          path: build/app/outputs/flutter-apk/app-debug.apk

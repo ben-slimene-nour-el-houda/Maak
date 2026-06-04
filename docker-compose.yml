@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - TESSERACT_PATH=/usr/bin/tesseract
+    volumes:
+      - ./backend:/app
+    restart: always
+
+# db:
+#   image: postgres:15
+#   environment:
+#     POSTGRES_DB: maak_db
+#     POSTGRES_USER: user
+#     POSTGRES_PASSWORD: password

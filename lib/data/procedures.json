@@ -1,0 +1,189 @@
+{
+  "procedures": [
+    {
+      "key": "lost_cin",
+      "title_ar": "فقدت بطاقة التعريف الوطنية",
+      "title_fr": "J'ai perdu ma Carte d'Identité Nationale (CIN)",
+      "title_darija": "ضيعت بطاقة التعريف",
+      "description_ar": "دليل كامل لاستبدال بطاقة التعريف الوطنية في حالة الفقدان أو السرقة",
+      "description_fr": "Guide complet pour remplacer votre Carte d'Identité Nationale en cas de perte ou vol",
+      "description_darija": "دليل كامل باش تستبدل بطاقة التعريف متاعك إذا ضيعتها أو اتسرقت",
+      "steps_ar": [
+        "الإبلاغ الفوري عن الفقدان في أقرب مركز شرطة أو حرس وطني",
+        "ملء الاستمارة الإدارية وتوقيعها",
+        "تقديم شهادة التصريح بالفقدان",
+        "إحضار 3 صور شمسية حديثة (مقاس 3/4 سم)",
+        "دفع الرسوم (25 دينار)",
+        "إيداع الملف في مركز الشرطة أو الحرس الوطني",
+        "استلام البطاقة الجديدة بعد المعالجة"
+      ],
+      "steps_fr": [
+        "Déclarer immédiatement la perte au poste de police ou de la Garde Nationale le plus proche",
+        "Remplir et signer le formulaire administratif",
+        "Fournir l'attestation de déclaration de perte",
+        "Fournir 3 photos d'identité récentes (format 3/4 cm)",
+        "Payer les droits (25 dinars)",
+        "Déposer le dossier au poste de police ou Garde Nationale",
+        "Récupérer la nouvelle carte après traitement"
+      ],
+      "steps_darija": [
+        "بلغ فورا على الضياع في أقرب مركز شرطة أو حرس",
+        "عمّر الاستمارة الإدارية ووقّعها",
+        "جيب شهادة التصريح بالضياع",
+        "جيب 3 صور شمسية جديدة (مقاس 3/4)",
+        "ادفع 25 دينار",
+        "سلم الملف في الشرطة أو الحرس",
+        "خذ البطاقة الجديدة بعد 15 يوم"
+      ],
+      "required_documents_ar": [
+        "استمارة الطلب الإدارية موقعة",
+        "شهادة التصريح بالفقدان",
+        "3 صور شمسية حديثة",
+        "وصل دفع الرسوم (25 دينار)",
+        "أي وثيقة إثبات هوية أخرى إن أمكن"
+      ],
+      "required_documents_fr": [
+        "Formulaire administratif rempli et signé",
+        "Attestation de déclaration de perte",
+        "3 photos d'identité récentes",
+        "Quittance de paiement (25 dinars)",
+        "Tout autre document prouvant votre identité"
+      ],
+      "required_documents_darija": [
+        "استمارة إدارية معمّرة وموقّعة",
+        "شهادة التبليغ بالضياع",
+        "3 صور شمسية جديدة",
+        "وصل الدفع 25 دينار",
+        "أي وثيقة أخرى تثبت هويتك"
+      ],
+      "cost_ar": "25 دينار تونسي",
+      "cost_fr": "25 dinars tunisiens",
+      "cost_darija": "25 دينار",
+      "time_required_ar": "حوالي 15 يوم عمل",
+      "time_required_fr": "Environ 15 jours ouvrables",
+      "time_required_darija": "15 يوم تقريبا",
+      "where_to_go_ar": "أقرب مركز شرطة أو حرس وطني في مكان إقامتك",
+      "where_to_go_fr": "Poste de police ou Garde Nationale le plus proche de votre résidence",
+      "where_to_go_darija": "أقرب مركز شرطة أو حرس في منطقتك",
+      "important_notes_ar": "يجب الإبلاغ عن الفقدان فوراً (خلال 30 يوم كحد أقصى). تجنب استخدام البطاقة القديمة بعد الفقدان.",
+      "important_notes_fr": "Déclarez la perte immédiatement (dans un délai max de 30 jours). Évitez d'utiliser l'ancienne carte après la perte.",
+      "important_notes_darija": "بلغ على الضياع فورا (ماشي أكثر من 30 يوم). متستعملش البطاقة القديمة بعد الضياع."
+    },
+
+    {
+      "key": "register_cnam",
+      "title_ar": "التسجيل في الكنام (التأمين الصحي)",
+      "title_fr": "Inscription à la CNAM (Assurance Maladie)",
+      "title_darija": "التسجيل في الكنام",
+      "description_ar": "التسجيل في صندوق التأمين الصحي الوطني للاستفادة من تغطية طبية",
+      "description_fr": "Inscription à la Caisse Nationale d'Assurance Maladie pour bénéficier d'une couverture santé",
+      "description_darija": "تسجل في الكنام باش تستفيد من التغطية الصحية",
+      "steps_ar": [
+        "التأكد من التسجيل في الصندوق الوطني للضمان الاجتماعي (CNSS)",
+        "تقديم طلب التسجيل في الكنام",
+        "إحضار الوثائق المطلوبة",
+        "انتظار الموافقة واستلام البطاقة"
+      ],
+      "steps_fr": [
+        "Vérifier votre affiliation à la CNSS",
+        "Déposer une demande d'inscription à la CNAM",
+        "Fournir les documents requis",
+        "Attendre l'approbation et recevoir la carte"
+      ],
+      "steps_darija": [
+        "تأكد أنك مسجل في الـ CNSS",
+        "قدم طلب التسجيل في الكنام",
+        "جيب الوثائق اللازمة",
+        "استنى الموافقة وخذ الكارت"
+      ],
+      "required_documents_ar": [
+        "بطاقة التعريف الوطنية",
+        "شهادة التسجيل في CNSS",
+        "إثبات الدخل أو الوظيفة",
+        "صور شمسية"
+      ],
+      "required_documents_fr": [
+        "Carte d'identité nationale",
+        "Attestation d'affiliation CNSS",
+        "Preuve de revenus ou emploi",
+        "Photos d'identité"
+      ],
+      "required_documents_darija": [
+        "بطاقة التعريف",
+        "شهادة تسجيل في الـ CNSS",
+        "إثبات الراتب أو الشغل",
+        "صور شمسية"
+      ],
+      "cost_ar": "مجاني (حسب النظام)",
+      "cost_fr": "Gratuit (selon le régime)",
+      "cost_darija": "مجاني",
+      "time_required_ar": "من أسبوع إلى شهر",
+      "time_required_fr": "De 1 semaine à 1 mois",
+      "time_required_darija": "من أسبوع لشهر",
+      "where_to_go_ar": "مكاتب الكنام أو عبر التطبيق/الموقع الرسمي",
+      "where_to_go_fr": "Agences CNAM ou via le site/application officiel",
+      "where_to_go_darija": "مكاتب الكنام أو عبر الإنترنت",
+      "important_notes_ar": "يجب أن تكون مسجلاً في الضمان الاجتماعي أولاً.",
+      "important_notes_fr": "Vous devez d'abord être affilié à la sécurité sociale (CNSS).",
+      "important_notes_darija": "لازم تكون مسجل في الـ CNSS قبل الكنام."
+    },
+
+    {
+      "key": "birth_certificate",
+      "title_ar": "استخراج شهادة الولادة",
+      "title_fr": "Extrait d'Acte de Naissance",
+      "title_darija": "استخراج شهادة الميلاد",
+      "description_ar": "طلب استخراج أو تجديد شهادة الولادة رقمية أو ورقية",
+      "description_fr": "Demande d'extrait ou de copie d'acte de naissance",
+      "description_darija": "طلب شهادة ميلاد جديدة أو استخراج",
+      "steps_ar": [
+        "التوجه إلى المكتب البلدي لمكان الولادة",
+        "ملء استمارة الطلب",
+        "تقديم الوثائق المطلوبة",
+        "دفع الرسوم إن وجدت",
+        "استلام الشهادة"
+      ],
+      "steps_fr": [
+        "Se rendre à la municipalité du lieu de naissance",
+        "Remplir le formulaire de demande",
+        "Fournir les documents requis",
+        "Payer les frais si applicable",
+        "Récupérer l'extrait"
+      ],
+      "steps_darija": [
+        "روح للبلدية متاع مكان الولادة",
+        "عمّر الاستمارة",
+        "جيب الوثائق",
+        "ادفع إذا لازم",
+        "خذ الشهادة"
+      ],
+      "required_documents_ar": [
+        "بطاقة التعريف الوطنية للطالب",
+        "معلومات الوالدين",
+        "صورة من شهادة الولادة القديمة إن وجدت"
+      ],
+      "required_documents_fr": [
+        "Carte d'identité du demandeur",
+        "Informations des parents",
+        "Copie de l'ancien acte si disponible"
+      ],
+      "required_documents_darija": [
+        "بطاقة التعريف",
+        "معلومات الأب والأم",
+        "نسخة من الشهادة القديمة إذا موجودة"
+      ],
+      "cost_ar": "مجاني أو رسوم رمزية",
+      "cost_fr": "Gratuit ou frais symboliques",
+      "cost_darija": "مجاني أو فلوس بسيطة",
+      "time_required_ar": "فوري أو خلال يوم واحد",
+      "time_required_fr": "Immédiat ou dans la journée",
+      "time_required_darija": "فوري أو في اليوم",
+      "where_to_go_ar": "البلدية (المكتب البلدي) لمكان الولادة",
+      "where_to_go_fr": "Municipalité du lieu de naissance",
+      "where_to_go_darija": "البلدية متاع مكان الولادة",
+      "important_notes_ar": "يمكن طلبها إلكترونياً عبر بعض المنصات الحكومية.",
+      "important_notes_fr": "Il est parfois possible de la demander en ligne via les plateformes gouvernementales.",
+      "important_notes_darija": "ممكن تطلبها أونلاين من بعض المواقع الحكومية."
+    }
+  ]
+}
